@@ -1,0 +1,69 @@
+
+#about {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+#about h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #002F6C;
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  margin-top: 5rem;
+  color: #003366;
+  text-align: left;
+  padding: .5rem;
+  margin:.5rem;
+  max-width: 300px;
+  background: #A6D6DC;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+#about ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: .5rem;
+}
+
+#about ul li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+
+#about ul li strong {
+  color: #00509e;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: .5rem 0 0.2rem;
+  font-weight: bold;
+}
+
+form input, form textarea, form button {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
