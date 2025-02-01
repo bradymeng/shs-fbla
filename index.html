@@ -39,7 +39,7 @@
 
     <!-- Event Calender-->
     <section id="Calendar">
-        <h2>Calendar</h2>
+        <h2><a href="#calendar">Calendar</a></h2>
         <p>Stay updated on important dates, meetings, and competition deadlines!</p>
         <link rel="stylesheet" href="css/calendar.css">
         <div id="calendar-container">
@@ -128,13 +128,13 @@
 
     <!-- About Us Section -->
     <section id="about">
-        <h2>About Us</h2>
+        <h2><a href="pages/about.html">About Us</a></h2>
         <p>Learn more about our FBLA chapter, our mission, and how to get involved.</p>
     </section>
 
     <!-- Competitive Events Section -->
     <section id="events">
-        <h2>Competitive Events</h2>
+        <h2><a href="#calendar">Competitive Events</a></h2>
         <p>Explore the wide range of events you can participate in, from team presentations to individual challenges.</p>
     </section>
 
@@ -160,6 +160,15 @@
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
+            <label for="email">Sponsor/Board Member Email:</label>
+                <input type="email" name="email" list="sponsor/Eboard emails" required>
+                <datalist id="sponsor/Eboard emails">
+                    <option value="Jmcbride@d125.org">
+                    <option value="Rcarlson@d125.org">
+                    <option value="bmeng26@students.d125.org">
+                    </option value="Tliu25@students.d125.org">
+                  </datalist>
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>

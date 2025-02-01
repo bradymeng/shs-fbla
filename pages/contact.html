@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FBLA Club</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to external CSS file -->
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="events.html">Competitive Events</a></li>
+                    <li><a href="tests.html">Objective Tests</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contact section-->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="email">Sponsor/Board Member Email:</label>
+                <input type="email" name="email" list="sponsor/Eboard emails" required>
+                <datalist id="sponsor/Eboard emails">
+                    <option value="Jmcbride@d125.org">
+                    <option value="Rcarlson@d125.org">
+                    <option value="bmeng26@students.d125.org">
+                    </option value="Tliu25@students.d125.org">
+                  </datalist>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </body>
+</html>
