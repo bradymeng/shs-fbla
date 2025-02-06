@@ -41,8 +41,8 @@
 }
 
 #about ul li {
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
+  font-size: 10;
+  padding: 0.2rem;
 }
 
 #about ul li strong {
@@ -66,4 +66,15 @@ form input, form textarea, form button {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+table, th, td {
+  font-size: 14px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table, th, td strong{
+  color: #00509e;
 }
