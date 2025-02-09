@@ -61,6 +61,23 @@ section h2 {
   font-size: 1.8rem;
 }
 
+section h2 button{
+  font-family: Montserrat;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #002F6C;
+  background: none;
+  border: none;
+  
+}
+
+section h2 button :hover{
+  transition: .3s;
+  color: #00509e;
+  
+}
+
 /* Form Styles */
 form {
   display: flex;

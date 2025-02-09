@@ -10,6 +10,7 @@
 }
 
 #about h1 {
+  background: #FAF9F6;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #002F6C;
@@ -21,9 +22,9 @@
   color: #003366;
   text-align: left;
   padding: .5rem;
-  margin:.5rem;
+  
   max-width: 300px;
-  background: #A6D6DC;
+  background: #FAF9F6;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -68,8 +69,12 @@ form input, form textarea, form button {
   font-size: 1rem;
 }
 
+/*Table*/
 table, th, td {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 14px;
+  padding:5px;
   padding-left: 10px;
   border: 2px solid black;
   border-collapse: collapse;
@@ -77,4 +82,12 @@ table, th, td {
 
 table, th, td strong{
   color: #00509e;
+}
+
+img{
+  max-width: 600px;
+  display:block;
+  padding-top:1rem;
+  margin-left:auto;
+  margin-right:auto;
 }
