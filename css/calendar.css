@@ -125,3 +125,27 @@ footer {
       padding: 1rem;
   }
 }
+
+.event-day {
+  background-color: #ffeb3b; /* Yellow highlight */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.event-day:hover {
+  background-color: #ffc107; /* Darker yellow on hover */
+}
+
+/* Important dates section */
+#important-dates {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#important-dates h3 {
+  text-align: center;
+  color: #d32f2f;
+}

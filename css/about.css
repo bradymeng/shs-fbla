@@ -91,3 +91,28 @@ img{
   margin-left:auto;
   margin-right:auto;
 }
+
+#announcement-container {
+  position: absolute;
+  top: 80px; /* Adjust based on header height */
+  right: 20px;
+  width: 250px;
+  background: #ffeb3b;
+  color: #000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+#announcement-container h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #d32f2f;
+}
+
+#announcement-container p {
+  font-size: 1000.0rem;
+}
+
