@@ -2,47 +2,139 @@
 #calendar-container {
   text-align: center;
   margin-top: 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #calendar-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #calendar-header button {
-  padding: 5px 15px;
+  padding: 8px 20px;
   cursor: pointer;
   background-color: #0044cc;
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+#calendar-header button:hover {
+  background-color: #0033aa;
 }
 
 #calendar-header h3 {
-  margin: 0 5px;
+  margin: 0 15px;
+  font-size: 20px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th, td {
   width: 14%;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #ddd;
 }
 
 td:hover {
   background-color: #e0e0e0;
 }
 
+.event-day {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.event-day:hover {
+  background-color: #ffc107;
+}
+
+/* Event Form Styles */
+#add-event-form {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 10;
+}
+
+#add-event-form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0044cc;
+}
+
+#add-event-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#add-event-form input,
+#add-event-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#add-event-form button {
+  width: 100%;
+  padding: 10px;
+  background: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+#add-event-form button:hover {
+  background: #0033aa;
+}
+
+#close-form {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
 #event-list {
   margin-top: 20px;
   text-align: left;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #event-list ul {
@@ -52,100 +144,12 @@ td:hover {
 
 #event-list ul li {
   margin-bottom: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #event-list h4 {
   margin-bottom: 10px;
-}
-
-/* Section Styles */
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-section h2 {
-  color: #003366;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-}
-
-/* Form Styles */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin: 0.5rem 0 0.2rem;
-  font-weight: bold;
-}
-
-form input, form textarea, form button {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  background: #003366;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: #00509e;
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #003366;
-  color: #fff;
-  margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  section {
-      padding: 1rem;
-  }
-}
-
-.event-day {
-  background-color: #ffeb3b; /* Yellow highlight */
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.event-day:hover {
-  background-color: #ffc107; /* Darker yellow on hover */
-}
-
-/* Important dates section */
-#important-dates {
-  margin-top: 20px;
-  padding: 10px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#important-dates h3 {
-  text-align: center;
   color: #d32f2f;
 }

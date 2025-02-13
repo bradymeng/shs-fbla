@@ -1,4 +1,3 @@
-// calendar.js
 const eventsData = {
     "2025-01-15": {
         event: "FBLA Meeting",
@@ -38,7 +37,6 @@ function renderCalendar() {
     const month = currentDate.getMonth();
     const year = currentDate.getFullYear();
 
-    // Set the month/year in the header
     const monthYear = document.getElementById('month-year');
     monthYear.innerText = `${currentDate.toLocaleString('default', { month: 'long' })} ${year}`;
 
@@ -47,27 +45,25 @@ function renderCalendar() {
     const daysInMonth = lastDate.getDate();
 
     const calendarBody = document.querySelector('#calendar tbody');
-    calendarBody.innerHTML = ''; // Clear previous days
+    calendarBody.innerHTML = '';
 
     let date = 1;
-    for (let i = 0; i < 6; i++) { // 6 rows (weeks)
+    for (let i = 0; i < 6; i++) {
         const row = document.createElement('tr');
-        for (let j = 0; j < 7; j++) { // 7 days (Sunday to Saturday)
+        for (let j = 0; j < 7; j++) {
             const cell = document.createElement('td');
             if (i === 0 && j < firstDay.getDay()) {
-                // Empty cells before the start of the month
                 row.appendChild(cell);
             } else if (date <= daysInMonth) {
                 const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
                 cell.innerText = date;
                 cell.classList.add("calendar-day");
 
-                // Highlight days with events
                 if (eventsData[fullDate]) {
                     cell.classList.add("event-day");
                 }
 
-                cell.addEventListener('click', () => showEvents(fullDate)); // Show events when a day is clicked
+                cell.addEventListener('click', () => handleDateClick(fullDate));
                 row.appendChild(cell);
                 date++;
             }
@@ -76,17 +72,14 @@ function renderCalendar() {
         if (date > daysInMonth) break;
     }
 
-    // Render important dates at the bottom
     renderImportantDates();
 }
 
-// Show events for a selected date
-function showEvents(date) {
+function handleDateClick(date) {
     const selectedDateElement = document.getElementById('selected-date');
     selectedDateElement.innerText = date;
-
     const eventList = document.getElementById('events');
-    eventList.innerHTML = ''; // Clear previous events
+    eventList.innerHTML = '';
 
     if (eventsData[date]) {
         const eventInfo = eventsData[date];
@@ -96,15 +89,45 @@ function showEvents(date) {
             <p><strong>Details:</strong> ${eventInfo.info}</p>
         `;
     } else {
-        eventList.innerHTML = "<p>No events for this day.</p>";
+        eventList.innerHTML = "<p>No events for this day.</p><button id='add-event-btn'>Add Event</button>";
+        document.getElementById('add-event-btn').addEventListener('click', () => showAddEventForm(date));
     }
 }
 
-// Display important dates below the calendar
+function showAddEventForm(date) {
+    const eventList = document.getElementById('events');
+    eventList.innerHTML = `
+        <h4>Add Event for ${date}</h4>
+        <label>Event Name: <input type='text' id='event-name'></label>
+        <label>Start Time: <input type='time' id='event-start'></label>
+        <label>End Time: <input type='time' id='event-end'></label>
+        <label>Info: <input type='text' id='event-info'></label>
+        <button id='save-event-btn'>Save Event</button>
+    `;
+    document.getElementById('save-event-btn').addEventListener('click', () => saveEvent(date));
+}
+
+function saveEvent(date) {
+    const eventName = document.getElementById('event-name').value;
+    const eventStart = document.getElementById('event-start').value;
+    const eventEnd = document.getElementById('event-end').value;
+    const eventInfo = document.getElementById('event-info').value;
+
+    if (eventName && eventStart && eventEnd && eventInfo) {
+        eventsData[date] = {
+            event: eventName,
+            timeStart: eventStart,
+            timeEnd: eventEnd,
+            info: eventInfo
+        };
+        renderCalendar();
+        showEvents(date);
+    }
+}
+
 function renderImportantDates() {
     const importantDatesContainer = document.getElementById("important-dates");
     importantDatesContainer.innerHTML = "<h3>Important Dates</h3>";
-
     Object.keys(eventsData).forEach(date => {
         const event = eventsData[date];
         const eventItem = document.createElement("p");
@@ -113,7 +136,6 @@ function renderImportantDates() {
     });
 }
 
-// Event listeners for navigation buttons
 document.getElementById('prev-month').addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();
@@ -124,7 +146,4 @@ document.getElementById('next-month').addEventListener('click', () => {
     renderCalendar();
 });
 
-// Initial render
 renderCalendar();
-
-
