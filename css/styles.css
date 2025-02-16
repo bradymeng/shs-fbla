@@ -43,21 +43,29 @@ header nav ul li a:hover {
 
 
 /* Section Styles */
+section{
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
 section h1{
   font-size: 2rem;
   text-align: center;
   padding: 1rem;
   margin:1rem;
   margin-bottom: 3rem;
-  max-width: 800px;
-  background: #FAF9F6;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  
 }
 
 section h2 {
   font-size: 1.8rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #003366;
   text-align: left;
   padding: .5rem;
