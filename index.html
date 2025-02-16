@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FBLA Club Website</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/calendar.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..
-900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <!-- Header Section -->
     <header>
         <nav>
@@ -31,81 +29,77 @@
         </nav>
     </header>
 
-    
+    <!-- Logo -->
+    <div class="logo">
+        <img src="photos/FBLA Transparent-Photoroom.png" alt="FBLA Logo">
+    </div>
 
-    <img src="photos/FBLA Transparent-Photoroom.png">
+    <div class="container">
+        <!-- Homepage Section -->
+        <section id="home">
+            <h1>Welcome to Stevenson Future Business Leaders!</h1>
+            <p>This is the official FBLA Webpage for Adlai E. Stevenson High School.</p>
+            <p>Stay updated on our events and resources.</p>  
+            
+            <h2>Announcements:</h2>
+            <p style="color: crimson;"><strong>STATE MARCH 28TH-29TH!!</strong></p>
+        </section>
 
-    <!-- Homepage Section -->
-    <section id="home">
-        <h1>Welcome to Stevenson Future Business Leaders!</h1>
-        <p>This is the official FBLA Webpage for Adlai. E. Stevenson High School. </p>
-        <p>Stay updated on our events and resources. </p>  
-        
-        <h2>Announcements: </h2>
-        <p style="color: crimson;"><strong>STATE MARCH 28TH-29TH!!</strong></p>
-        
-    </section>
+        <!-- About Us Section -->
+        <section id="about">
+            <h2><a href="pages/about.html">About Us</a></h2>
+            <p>Learn more about our FBLA chapter, our mission, and how to get involved.</p>
+        </section>
 
-    
+        <!-- Competitive Events Section -->
+        <section id="event">
+            <h2><a href="pages/comp.html">Competitive Events</a></h2>
+            <p>Explore the wide range of events you can participate in, from team presentations to individual challenges.</p>
+        </section>
 
+        <!-- Objective Tests Section -->
+        <section id="tests">
+            <h2><a href="#tests">Objective Tests</a></h2>
+            <p>Prepare for success with our resources and tips for objective tests in various business-related topics.</p>
+        </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>
-            <button><a href="pages/about.html">About Us</a></button>
-        </h2>
-        <p>Learn more about our FBLA chapter, our mission, and how to get involved.</p>
-    </section>
+        <!-- Resources Section -->
+        <section id="resources">
+            <h2><a href="#resources">Resources</a></h2>
+            <p>Access study guides, practice materials, and other helpful resources for your FBLA journey.</p>
+        </section>
 
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2><a href="pages/contact.html">Contact Us</a></h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <!-- Competitive Events Section -->
-    <section id="events">
-        <h2><button><a href="#events">Competitive Events</a></button></h2>
-        <p>Explore the wide range of events you can participate in, from team presentations to individual challenges.</p>
-    </section>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-    <!-- Objective Tests Section -->
-    <section id="tests">
-        <h2><button><a href="#tests">Objective Tests</a></button></h2>
-        <p>Prepare for success with our resources and tips for objective tests in various business-related topics.</p>
-    </section>
+                <label for="sponsor-email">Sponsor/Board Member Email:</label>
+                <input type="email" id="sponsor-email" name="sponsor-email" list="sponsor-emails" required>
+                <datalist id="sponsor-emails">
+                    <option value="Jmcbride@d125.org"></option>
+                    <option value="Rcarlson@d125.org"></option>
+                    <option value="bmeng26@students.d125.org"></option>
+                    <option value="Tliu25@students.d125.org"></option>
+                </datalist>
 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-    <!-- Resources Section -->
-    <section id="resources">
-        <h2><button><a href= "#resources">Resources</a></button></h2>
-        <p>Access study guides, practice materials, and other helpful resources for your FBLA journey.</p>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2><button><a href= "pages/contact.html">Contact Us</a></button></h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="email">Sponsor/Board Member Email:</label>
-                <input type="email" name="email" list="sponsor/Eboard emails" required>
-                <datalist id="sponsor/Eboard emails">
-                    <option value="Jmcbride@d125.org">
-                    <option value="Rcarlson@d125.org">
-                    <option value="bmeng26@students.d125.org">
-                    </option value="Tliu25@students.d125.org">
-                  </datalist>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Stevenson High School FBLA. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
