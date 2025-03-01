@@ -67,6 +67,7 @@ section{
   color: #003366;
 }
 
+
 section h1{
   font-size: 2rem;
   text-align: center;
@@ -96,6 +97,21 @@ section h2 :hover {
   color: #00509e;
 }
 
+button{
+  margin-top:1rem;
+  font-family: Montserrat;
+  color: #003366;
+  background-color: #f4f4f9;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+button:hover{
+  transition: .3s;
+  font-weight: bold;
+  box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+}
 
 
 /* Form Styles */
