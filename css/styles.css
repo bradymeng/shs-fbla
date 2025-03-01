@@ -97,6 +97,11 @@ section h2 :hover {
   color: #00509e;
 }
 
+a{
+  text-decoration:none;
+  color: #003366;
+}
+
 button{
   margin-top:1rem;
   font-family: Montserrat;
@@ -155,14 +160,7 @@ footer {
   margin-bottom: 0;
 }
 
-a{
-  text-decoration: none;
-  color: 4882A6;
-}
 
-a:hover{
-  text-decoration: underline;
-}
 
 ul{
   list-style:none;
