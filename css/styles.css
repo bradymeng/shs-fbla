@@ -141,7 +141,11 @@ footer {
 
 a{
   text-decoration: none;
-  color: #333;
+  color: 4882A6;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 
 ul{
