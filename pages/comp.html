@@ -2,91 +2,97 @@
 <html lang="en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..
-900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@
+100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitive Events - FBLA Club</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to external CSS file -->
-    
+    <title>Manage FBLA Events</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+
     <header>
         <nav>
             <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="comp.html">Pre Area</a></li>
-              <li><a href="objective.html">Objective Tests</a></li>
-              <li><a href="calendar.html">Calendar</a></li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="comp.html">Pre Area</a></li>
+                <li><a href="objective.html">Objective Tests</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="sign-in.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Competitive Events Section -->
     <section>
-        <h1>Pre Area</h1>
-        <p>Pre Area is a Stevenson only competitition stage held within Stevenson High School and judged
-            by Stevenson business teachers. This stage a the prerequisite to being eligible to compete at
-            the Nothern Area Conferance held later in January.
-        </p>
-
-        <h2>Important Information!</h2>
-        <ul>
-            <li><Strong>Date/Time:</Strong> October 24, 2024; 4:00-7:00pm</li>
-            <li><Strong>Location:</Strong> 2400s Hallway, Stevenson High School</li>
-            <li>Competitors must wear Official FBLA Dress Code</li>
-            <li>Check in 15 minutes prior to event. Then find your team's room.</li>
-        </ul>
+        <h1>Pre Area Event</h1>
+        <p><strong>Date/Time:</strong> <span id="event-date"></span></p>
+        <p><strong>Location:</strong> <span id="event-location"></span></p>
 
         <h2>Prompt 1:</h2>
-        <ul>
-            <li><Strong>24-25 prompt 1:</Strong> Find a company struggling due to current events, define the struggle
-                , and propose a solution.
-            </li>
-            <li><Strong>Rubric:</Strong></li>
-            <li> - Provide Business Overview and Summary</li>
-            <li> - Demonstrate Awareness of Current Events Impacting the Business</li>
-            <li> - Identify a Relevent and Recent Corporate Struggle and Causes</li>
-            <li> - Propose Innovative Solution to Problem</li>
-            <li> - Use Relevant, Reliable Sources that are Cleary Cited</li>
-            <li> - Demonstrate Self-Confidence, Poise, Assertiveness</li>
-            <li> - Follow FBLA Dress Code</li>
-        </ul>
+        <p id="prompt-1"></p>
 
         <h2>Prompt 2:</h2>
-        <ul>
-            <li><Strong>24-25 prompt 2:</Strong> Compare 2 companies in the same industry, highlight similarities/differences,
-                and propose the more successful company.
-            </li>
-            <li><Strong>Rubric:</Strong></li>
-            <li> - Give Detailed Overview of Both Companies</li>
-            <li> - Effectively Descirbe Similarities</li>
-            <li> - Describe the Differences in Business Conduct, Structure, Operations, and Strategies</li>
-            <li> - Effectively Conclude Which Company was More Successful</li>
-            <li> - Use Relevant, Reliable Sources that are Cleary Cited</li>
-            <li> - Demonstrate Self-Confidence, Poise, Assertiveness</li>
-            <li> - Follow FBLA Dress Code</li>
-        </ul>
-
-
-        <h2>Presentation Details</h2>
-        <ul>
-            <li> - 5 Minute Presentation Time. Points deducted if over time</li>
-            <li> - 2 Minute Questioning by Judges</li>
-            <li> - Groups Consist of 3 Competitors</li>
-            <li>There Will Be Cuts!</li>
-        </ul>
+        <p id="prompt-2"></p>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Stevenson High School FBLA. All Rights Reserved.</p>
-    </footer>
+    <!-- Admin Update Form -->
+    <section>
+        <h2>Update Event Details (Admin Only)</h2>
+        <form id="event-form">
+            <label for="date">Date/Time:</label>
+            <input type="text" id="date" name="date"><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location"><br><br>
+
+            <label for="prompt1">Prompt 1:</label>
+            <textarea id="prompt1" name="prompt1"></textarea><br><br>
+
+            <label for="prompt2">Prompt 2:</label>
+            <textarea id="prompt2" name="prompt2"></textarea><br><br>
+
+            <button type="submit">Update</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch existing event data from local storage or backend
+            const eventData = JSON.parse(localStorage.getItem("eventData")) || {
+                date: "October 24, 2024; 4:00-7:00pm",
+                location: "2400s Hallway, Stevenson High School",
+                prompt1: "Find a company struggling due to current events, define the struggle, and propose a solution.",
+                prompt2: "Compare 2 companies in the same industry, highlight similarities/differences, and propose the more successful company."
+            };
+
+            // Display the event data
+            document.getElementById("event-date").textContent = eventData.date;
+            document.getElementById("event-location").textContent = eventData.location;
+            document.getElementById("prompt-1").textContent = eventData.prompt1;
+            document.getElementById("prompt-2").textContent = eventData.prompt2;
+
+            // Handle form submission
+            document.getElementById("event-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                const updatedEventData = {
+                    date: document.getElementById("date").value || eventData.date,
+                    location: document.getElementById("location").value || eventData.location,
+                    prompt1: document.getElementById("prompt1").value || eventData.prompt1,
+                    prompt2: document.getElementById("prompt2").value || eventData.prompt2
+                };
+
+                // Save to localStorage (for now, can be updated to a database)
+                localStorage.setItem("eventData", JSON.stringify(updatedEventData));
+
+                // Refresh to update content
+                location.reload();
+            });
+        });
+    </script>
+
 </body>
 </html>
