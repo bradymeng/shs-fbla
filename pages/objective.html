@@ -1,3 +1,4 @@
+<!-- Objective Tests Page -->
 <!DOCTYPE html>
 <html lang="en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,70 +9,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competitive Events - FBLA Club</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to external CSS file -->
-    
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../javascript/edit-objective.js" defer></script> <!-- Link to your editing script -->
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav>
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="comp.html">Pre Area</a></li>
-              <li><a href="objective.html">Objective Tests</a></li>
-              <li><a href="calendar.html">Calendar</a></li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="sign-in.html">Sign In</a></li>
-            </ul>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="comp.html">Pre Area</a></li>
+            <li><a href="objective.html">Objective Tests</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="sign-in.html">Sign In</a></li>
+          </ul>
         </nav>
     </header>
 
     <!-- Competitive Events Section -->
     <section>
         <h1>Objective Testing</h1>
-        <p>
-          Objective Tests are multiple-choice exams that assess a students' knoweldge on various
-          business-related subjects. Each test consists of 50-100 multiple-choice questions and 
-          is timed (~60 minutes).
-        </p>
-
-        <h2>What To Know</h2>
-        <ul>
-          <li><strong>If you choose to only compete in objective tests. You do not physically
-            attend Pre-Area. Some Role-Play or Presentational Events require an objective test.
-          </strong></li>
-            
-        </ul>
-
-        <h2>Testing Info</h2>
-        <ul>
-          <li><Strong>Date/Time:</Strong></li>
-          <li>December 10, 2024; 7:15-8:15pm</li>
-          <li>December 11, 2024; 3:30-4:45pm</li>
-          <li>December 12, 2024; 3:30-4:45pm</li>
-          <li>-------</li>
-          <li><Strong>Location:</Strong></li>
-          <li>Room 2104, Stevenson High School</li>
-          <li>-------</li>
-          <li>Competitors must wear Official FBLA Dress Code</li>
-          <li>Check in 15 minutes prior to event. Then find your team's room.</li>
-
-        </ul>
-
-
-        <h2>Resources</h2>
-        <ul>
-            <li>Check here for the official prompts and details:</li>
-            <li><strong><a href="https://www.fbla.org/high-school/competitive-events
-            /?_event_category=objective-tests" target="_blank">National FBLA Website<a/></strong></li>
-        </ul>
+        <button id="edit-btn" style="display: none;">Edit</button>
+        <div id="objective-content" contenteditable="false">
+            <p>
+                Objective Tests are multiple-choice exams that assess a student's knowledge on various
+                business-related subjects. Each test consists of 50-100 multiple-choice questions and 
+                is timed (~60 minutes).
+            </p>
+            <h2>What To Know</h2>
+            <ul>
+                <li><strong>If you choose to only compete in objective tests, you do not physically
+                attend Pre-Area. Some Role-Play or Presentational Events require an objective test.</strong></li>
+            </ul>
+            <h2>Testing Info</h2>
+            <ul>
+                <li><strong>Date/Time:</strong></li>
+                <li id="date-time">December 10, 2024; 7:15-8:15pm</li>
+                <li>December 11, 2024; 3:30-4:45pm</li>
+                <li>December 12, 2024; 3:30-4:45pm</li>
+                <li>-------</li>
+                <li><strong>Location:</strong></li>
+                <li>Room 2104, Stevenson High School</li>
+                <li>-------</li>
+                <li>Competitors must wear Official FBLA Dress Code</li>
+                <li>Check in 15 minutes prior to event. Then find your team's room.</li>
+            </ul>
+            <h2>Resources</h2>
+            <ul>
+                <li>Check here for the official prompts and details:</li>
+                <li><strong><a href="https://www.fbla.org/high-school/competitive-events/?_event_category=objective-tests" target="_blank">National FBLA Website</a></strong></li>
+            </ul>
+        </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Stevenson High School FBLA. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
